@@ -32,7 +32,7 @@ GSOC 2016 Organizations <https://summerofcode.withgoogle.com/organizations/>
     * Python, JS, ML, Big Data (perl, postgresql, etc)
     * Ideas Page <https://wiki.musicbrainz.org/Development/Summer_of_Code/2016>
     * Check Individual Projects Website
-	  * Participated in GSOC 2015, 2014, 2013, 2012, 2011, 2010, 2009
+    * Participated in GSOC 2015, 2014, 2013, 2012, 2011, 2010, 2009
 	
 	---
 	
@@ -40,7 +40,7 @@ GSOC 2016 Organizations <https://summerofcode.withgoogle.com/organizations/>
     * Python, JS, gtk+
     * [Ideas Page](https://wiki.sugarlabs.org/go/Summer_of_Code/2016)
     * Website <http://sugarlabs.org>
-	  * Participated in GSOC 2016, 2015, 2014, 2013
+    * Participated in GSOC 2016, 2015, 2014, 2013
 	  
 	  ---
 
