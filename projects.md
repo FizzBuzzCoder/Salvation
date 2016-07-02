@@ -62,7 +62,6 @@ GSOC 2016 Organizations <https://summerofcode.withgoogle.com/organizations/>
   ---
   
 #### Other Projects
-
-i. BioJS
-ii. Aimacode
-iii. SymPy
+	* BioJS
+	* Aimacode
+	* SymPy
