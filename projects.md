@@ -14,17 +14,17 @@ GSOC 2016 Organizations <https://summerofcode.withgoogle.com/organizations/>
 	* Website <http://orange.biolab.si>
 	* [Youtube Tutorial](https://www.youtube.com/channel/UClKKWBe2SCAEyv7ZNGhIe4g)
 	* If you know Qt, you can proceed, otherwise:
-	    i. check out the book 'Rapid GUI Programming with Python and Qt'
-	    ii. If you know other good resources, add links here
-	* Appeared in GSOC 2016, 2012, 2011
+	      i. check out the book 'Rapid GUI Programming with Python and Qt'
+	      ii. If you know other good resources, add links here
+	* Participated in GSOC 2016, 2012, 2011
 	
 	---
 
 2. Build mLearn
     * Python, Django, Bootstrap, (mainly Android)
-    * Their main work in based on Android but there portal is in Django
+    * Their main work in based on Android but their portal is in Django
     * [Ideas Page](https://github.com/BuildmLearn/BuildmLearn-Toolkit/wiki/Google-Summer-of-Code-2016-Ideas)
-	  * Appeared in GSOC 2016, 2015 (slim chance for 2017)
+	  * Participated in GSOC 2016, 2015 (slim chance for 2017)
 	
 	---
 
@@ -32,7 +32,7 @@ GSOC 2016 Organizations <https://summerofcode.withgoogle.com/organizations/>
     * Python, JS, ML, Big Data (perl, postgresql, etc)
     * Ideas Page <https://wiki.musicbrainz.org/Development/Summer_of_Code/2016>
     * Check Individual Projects Website
-	  * Appeared in GSOC 2015, 2014, 2013, 2012, 2011, 2010, 2009
+	  * Participated in GSOC 2015, 2014, 2013, 2012, 2011, 2010, 2009
 	
 	---
 	
@@ -40,7 +40,7 @@ GSOC 2016 Organizations <https://summerofcode.withgoogle.com/organizations/>
     * Python, JS, gtk+
     * [Ideas Page](https://wiki.sugarlabs.org/go/Summer_of_Code/2016)
     * Website <http://sugarlabs.org>
-	  * GSOC 2016, 2015, 2014, 2013
+	  * Participated in GSOC 2016, 2015, 2014, 2013
 	  
 	  ---
 
@@ -49,7 +49,7 @@ GSOC 2016 Organizations <https://summerofcode.withgoogle.com/organizations/>
     * [Ideas Page](https://github.com/zulip/zulip.github.io/blob/master/gsoc-ideas.md)
     * Website <https://www.zulip.org>
     * mainly focussed on WebDev, UI/UX, App Integration, etc.
-    * Appeared in GSOC 2016
+    * Participated in GSOC 2016
 
   ---
 
@@ -57,7 +57,7 @@ GSOC 2016 Organizations <https://summerofcode.withgoogle.com/organizations/>
     * Python, JS, Astronomy, Time Series
     * [Ideas Page](http://timelabtechnologies.com/ideas.html)
     * Website <http://www.timelabtechnologies.com/>
-    * Appeared in GSOC 2016
+    * Participated in GSOC 2016
 
   ---
   
