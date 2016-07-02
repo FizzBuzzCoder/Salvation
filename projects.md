@@ -24,7 +24,7 @@ GSOC 2016 Organizations <https://summerofcode.withgoogle.com/organizations/>
     * Python, Django, Bootstrap, (mainly Android)
     * Their main work in based on Android but their portal is in Django
     * [Ideas Page](https://github.com/BuildmLearn/BuildmLearn-Toolkit/wiki/Google-Summer-of-Code-2016-Ideas)
-	  * Participated in GSOC 2016, 2015 (slim chance for 2017)
+    * Participated in GSOC 2016, 2015 (slim chance for 2017)
 	
 	---
 
