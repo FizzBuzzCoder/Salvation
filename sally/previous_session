@@ -1,0 +1,109 @@
+'''
+class Session(object):
+    def __init__(self, sess_id):
+        self.sess_id = sess_id
+        self.state = 0
+        self.fail = 0
+        self.end = False
+
+    def fail_over(self, text):
+        if self.fail > 0:
+            self.state = -1
+            self.end = True
+            response = default_transfer_response
+        else:
+            self.fail += 1
+            response = text
+        return response
+
+    def get_response(self, text):
+        fail = False
+
+        if self.state == 0:
+            if any([w in text for w in ['report', 'claim', 'file', 'damage']]):
+                self.state = 1
+                response = 'Sure. How did the loss occur?'
+            else:
+                fail = True
+                text = 'I am sorry. I could not understand you. Can you please tell me what happened to your property?'
+                response = self.fail_over(text)
+        
+        elif self.state == 1:
+            damage_intent = get_fuzzy_intent(text)
+            if 'interior' in damage_intent:
+                self.state = 3
+                response = 'Please tell me if there is something outside the house that is damaged?'
+            elif 'exterior' in damage_intent:
+                self.state = 4
+                response = 'Oh. Please tell me if there is something inside the house that is damaged?'
+            elif 'damage' in damage_intent:
+                self.state = 5
+                response = 'Ok. Just for the record, can you please name the contents or things on your property that got damaged?'
+            else:
+                fail = True
+                text = 'I am sorry. I could not understand you. Can you please tell me in detail about the loss that occurred?'
+                response = self.fail_over(text)
+        
+        elif self.state == 3:
+            damage_intent = get_fuzzy_intent(text)
+            if len(damage_intent.keys()) > 0 or any([w in text for w in ['yes', 'no', 'nothing', 'yup', 'yea', 'yeah']]):
+                self.state = 5
+                response = 'Ok. Just for the record, can you please name the contents or things on your property that got damaged?'
+            else:
+                fail = True
+                text = "I am sorry. I could not understand you. Can you please tell me if there is any damage outside your house? "\
+                    "This may include roof, siding, enclosure, fencing, etc."
+                response = self.fail_over(text)
+
+        elif self.state == 4:
+            damage_intent = get_fuzzy_intent(text)
+            if len(damage_intent.keys()) > 0 or any([w in text for w in ['yes', 'no', 'nothing', 'yup', 'yea', 'yeah']]):
+                self.state = 5
+                response = 'Ok. Just for the record, can you please name the contents or things on your property that got damaged?'
+            else:
+                fail = True
+                text = "I am sorry. I could not understand you. Can you please tell if there is anything inside your house that is damaged? "\
+                    "This may include baseboard, wall, ceiling, cabinetry, etc"
+                response = self.fail_over(text)
+        
+        elif self.state == 5:
+            damage_intent = get_fuzzy_intent(text)
+            if len(damage_intent.keys()) > 0 or any([w in text for w in ['yes', 'no', 'nothing', 'yup', 'yea', 'yeah']]):
+                self.state = 10
+                response = "Ok. Have you faced power loss during the hurricane?"
+            else:
+                fail = True
+                text = "I am sorry. I could not understand you. Please name the object on your property that are damaged. "\
+                    "This may include roof, fencing, windows or any other object that you believe is damaged."
+                response = self.fail_over(text)
+        
+        elif self.state == 10:
+            if any([w in text for w in ['power', 'cut', 'loss', 'blackout','yes', 'no', 'nothing', 'yup', 'yea', 'yeah']]):
+                self.state = 11
+                response = "Fine. Is there any food spoilage due to power loss?"
+            else:
+                fail = True
+                text = "I am sorry. I could not understand you. Please inform me about any power loss that happened during the hurricane."
+                response = self.fail_over(text)
+
+        elif self.state == 11:
+            if any([w in text for w in ['food', 'spoilage', 'refrigerator', 'fridge', 'yes', 'no', 'nothing', 'yup', 'yea', 'yeah']]):
+                self.state = 12
+                response = "Got that. I have filed a claim for you. Your claim number is eight six three two four nine two three two one. "\
+                    "An examiner will contact you soon. "\
+                    "Please listen carefully to the disclaimer: \"Do not discard any damaged property or repair receipts as it is evidence. "\
+                    "If flooring is removed, take photos of its condition and retain a sample for the adjuster.\" " \
+                    "You will shortly receive the claim details in an SMS. Thanks and have a nice day."
+                self.end = True
+            else:
+                fail = True
+                text = "I am sorry I could not understand you. Please tell me if any food is spoiled due to water damage."
+                response = self.fail_over(text)
+        else:
+            response = 'end of conversation reached'
+
+        if not fail:
+            self.fail = 0
+
+        return response, self.end
+'''
